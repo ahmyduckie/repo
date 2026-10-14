@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Structure | A Deeper Look Into URLs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">URL Guide</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a class="active" href="structure.html">URL Structure</a>
+      <a href="how-urls-work.html">How URLs Work</a>
+      <a href="security.html">Security</a>
+      <a href="concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container page-content">
+    <p class="eyebrow">Topic 01</p>
+    <h1>Understanding URL Structure</h1>
+    <p class="lead">
+      A URL is made up of different components. Some are common in most
+      web addresses, while others are optional and depend on the resource.
+    </p>
+
+    <section class="content-section">
+      <h2>Example URL</h2>
+      <div class="url-example">
+        <code>https://example.com:8080/folder/page.html?search=url#top</code>
+      </div>
+      <p>
+        This example shows how a URL can contain a scheme, host, port,
+        path, query, and fragment.
+      </p>
+      <figure>
+        <img
+          src="images/url-parts.png"
+          alt="Diagram labeling the different components of a URL"
+        >
+        <figcaption>
+          Each component of a URL has a different purpose.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="content-section">
+      <h2>Main Components</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Example</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Scheme</td>
+              <td><code>https</code></td>
+              <td>Identifies the protocol used to access the resource.</td>
+            </tr>
+            <tr>
+              <td>Host</td>
+              <td><code>example.com</code></td>
+              <td>Identifies the host the browser contacts.</td>
+            </tr>
+            <tr>
+              <td>Port</td>
+              <td><code>:8080</code></td>
+              <td>Specifies a network port when included.</td>
+            </tr>
+            <tr>
+              <td>Path</td>
+              <td><code>/folder/page.html</code></td>
+              <td>Identifies a resource or route on the host.</td>
+            </tr>
+            <tr>
+              <td>Query</td>
+              <td><code>?search=url</code></td>
+              <td>Can pass additional information to the resource.</td>
+            </tr>
+            <tr>
+              <td>Fragment</td>
+              <td><code>#top</code></td>
+              <td>Can identify a section within a page.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Absolute and Relative URLs</h2>
+      <p>
+        An absolute URL includes the full address, including its scheme
+        and host. A relative URL leaves out some of that information and
+        is interpreted using the current page as a starting point.
+      </p>
+
+      <div class="comparison-grid">
+        <div class="info-panel">
+          <h3>Absolute URL</h3>
+          <code>https://example.com/pages/help.html</code>
+          <p>Includes the scheme and host.</p>
+        </div>
+
+        <div class="info-panel">
+          <h3>Relative URL</h3>
+          <code>/pages/help.html</code>
+          <p>Uses the current site's address as a starting point.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      This website is a class project for IT 3203.
+      Visit the
+      <a
+        href="https://ksuweb.github.io/IT3203/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >IT 3203 course website</a>.
+    </p>
+  </footer>
+</body>
+</html>
