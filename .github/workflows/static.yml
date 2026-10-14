@@ -1,11 +1,10 @@
-```yaml
-# Deploy the website to GitHub Pages
 
 name: Deploy static content to Pages
 
-on:
+'on':
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -14,15 +13,15 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
   deploy:
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -34,9 +33,8 @@ jobs:
       - name: Upload website files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./url-website"
+          path: ./url-website
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
-```
+        uses: actions/deploy-pages@v4
